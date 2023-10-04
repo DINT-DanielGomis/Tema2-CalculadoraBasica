@@ -1,0 +1,29 @@
+﻿<Window x:Class="Tema2_CalculadoraBasica.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tema2_CalculadoraBasica"
+        mc:Ignorable="d"
+        Title="Calculadora" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="textBoxOperand1" Grid.Row="0" Margin="5" Width="100"/>
+        <ComboBox x:Name="comboBoxOperator" Grid.Row="1" Margin="5" Width="40">
+            <ComboBoxItem Content="+"/>
+            <ComboBoxItem Content="-"/>
+            <ComboBoxItem Content="*"/>
+            <ComboBoxItem Content="/"/>
+        </ComboBox>
+        <TextBox x:Name="textBoxOperand2" Grid.Row="2" Margin="5" Width="100"/>
+        <Button x:Name="calculateButton" Grid.Row="3" Content="Calcular" Margin="5" Width="80" Click="CalculateButton_Click" IsDefault="True" />
+        <Button x:Name="clearButton" Grid.Row="3" Content="Limpiar" Margin="5" Width="80" Click="ClearButton_Click" IsCancel="True"/>
+        <TextBox x:Name="resultTextBox" Grid.Row="4" Margin="5" Width="100" IsReadOnly="True"/>
+    </Grid>
+</Window>
